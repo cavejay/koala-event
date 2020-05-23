@@ -1,0 +1,28 @@
+{
+  "name": "koala-event",
+  "version": "1.0.0",
+  "description": "Koa-style routing middleware for events",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cavejay/koala-event.git"
+  },
+  "keywords": [
+    "koa",
+    "event",
+    "emitter",
+    "middleware"
+  ],
+  "author": "cavejay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cavejay/koala-event/issues"
+  },
+  "homepage": "https://github.com/cavejay/koala-event#readme",
+  "dependencies": {
+    "koa-compose": "^4.1.0"
+  }
+}
