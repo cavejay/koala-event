@@ -62,6 +62,7 @@ class EventRouter extends KoalaEvent {
     }
 
     this.eventMap[event].push(fn);
+    return this
   }
 
   // attach the middleware now
