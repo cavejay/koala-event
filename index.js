@@ -29,7 +29,7 @@ class KoalaEvent {
       // Assemble the context (ctx) from the original event's input
       const ctx = {
         event: arguments[0],
-        data: arguments[1],
+        data: arguments.length > 2 ? Object.values(arguments).slice(1) : arguments[1],
       };
 
       old_emit_local.apply(emitter, arguments); // trigger the original emitter
