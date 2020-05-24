@@ -71,13 +71,16 @@ class EventRouter extends KoalaEvent {
     for (let keyIndex in keys) {
       let composition = compose(this.eventMap[keys[keyIndex]]);
 
-      super.use(async (ctx, next) => {
+      // Create a middleware to exec the composition if the event matches what was registered.
+      const handlingOfKey = async (ctx, next) => {
         if (ctx.event == keys[keyIndex]) {
-          await composition(ctx);
+          return await composition(ctx);
         } else {
-          await next();
+          return await next();
         }
-      });
+      }
+
+      super.use(handlingOfKey)
     }
   }
 
